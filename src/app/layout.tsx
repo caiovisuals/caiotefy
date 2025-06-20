@@ -20,7 +20,7 @@ export default function Layout({children,}: Readonly<{children: React.ReactNode}
         <html lang="pt-br">
             <body className={geologica.className="flex flex-col w-screen h-screen"}>
                 <Header/>
-                <div className="flex flex-row w-full mt-[64px] mb-[72px] overflow-x-hidden">
+                <div className="flex flex-row w-full h-full mt-[64px] mb-[72px] overflow-x-hidden">
                     <Sidebar/>
                     {children}
                 </div>

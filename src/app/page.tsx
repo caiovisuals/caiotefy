@@ -25,8 +25,8 @@ export default function Home() {
     }
 
     return (
-        <div className="w-[calc(100%-16px)] xl:w-[calc(100%-80px)] h-full bg-[var(--middleground)] flex flex-col rounded-[8px] ml-[8px] xl:ml-[0px] mr-[8px]">
-            <header className="w-full bg-[var(--middleground)] flex flex-row items-center px-[40px] gap-[4px] py-[16px] rounded-[8px]">
+        <div className="w-[calc(100%-16px)] xl:w-[calc(100%-104px)] h-full bg-[var(--middleground)] flex flex-col rounded-[8px] ml-[8px] mr-[8px] xl:ml-[0px]">
+            <header className="w-full bg-[var(--middleground)] flex flex-row items-center px-[40px] gap-[4px] py-[16px] rounded-[8px] shadow-[0_1px_15px_rgb(21,21,21,0.25)] z-100">
                 <ButtonTypeHome onClick={() => setActiveFeed("All")} label="Tudo" active={activeFeed === "All"}/>
                 <ButtonTypeHome onClick={() => setActiveFeed("Musics")} label="Músicas" active={activeFeed === "Musics"}/>
                 <ButtonTypeHome onClick={() => setActiveFeed("Podcasts")} label="Podcasts" active={activeFeed === "Podcasts"}/>

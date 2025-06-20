@@ -10,10 +10,14 @@ html {
 
 :root {
   --background: #050505;
-  --middleground: #202020;
-  --foreground: #333;
+  --middleground: #151515;
+  --middlehover: #252525;
+  --foreground: #333333;
   --action: #454545;
   --text: white;
+  --subtext: #b3b3b3;
+  --texthover: #d8d8d8;
+  --primary: #2078E5;
 }
 
 ::-webkit-scrollbar {

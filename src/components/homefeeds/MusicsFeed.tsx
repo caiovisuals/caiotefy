@@ -1,31 +1,10 @@
 import Link from "next/link"
-import Image from "next/image"
+import RecentTopMusic from "../homesections/RecentTopMusic"
 
 export default function MusicsFeed() {
     return (
-            <div className="w-full h-full flex flex-col gap-[8px] px-[40px] overflow-y-auto overflow-x-hidden rounded-[8px]">
-                <div className="w-full grid grid-cols-2 md:grid-cols-4 gap-[8px]">
-                    <div className="w-full max-h-full-[160px] aspect-5/1 bg-gray-300 rounded-[8px] flex flex-row items-center justify-between gap-[10%]">
-                        <div className="h-full aspect-square rounded-[8px] overflow-hidden">
-                            <Image className="w-full h-full object-cover"
-                                src="/images/album-cover.jpg"
-                                alt="Album Cover"
-                                width={160}
-                                height={160}
-                                ></Image>
-                        </div>
-                        <div className="w-full h-full flex items-center justify-start">
-                            <h1 className="16px">Album</h1>
-                        </div>
-                    </div>
-                    <div className="w-full max-h-full-[160px] aspect-5/1 bg-gray-300 rounded-[8px]"></div>
-                    <div className="w-full max-h-full-[160px] aspect-5/1 bg-gray-300 rounded-[8px]"></div>
-                    <div className="w-full max-h-full-[160px] aspect-5/1 bg-gray-300 rounded-[8px]"></div>
-                    <div className="w-full max-h-full-[160px] aspect-5/1 bg-gray-300 rounded-[8px]"></div>
-                    <div className="w-full max-h-full-[160px] aspect-5/1 bg-gray-300 rounded-[8px]"></div>
-                    <div className="w-full max-h-full-[160px] aspect-5/1 bg-gray-300 rounded-[8px]"></div>
-                    <div className="w-full max-h-full-[160px] aspect-5/1 bg-gray-300 rounded-[8px]"></div>
-                </div>
+            <div className="w-full h-full flex flex-col gap-[16px] px-[40px] overflow-y-auto overflow-x-hidden rounded-[8px]">
+                <RecentTopMusic/>
                 <div className="flex flex-col gap-[16px]">
                     <div className="flex flex-row items-center justify-between">
                         <h1>Feito para user</h1>

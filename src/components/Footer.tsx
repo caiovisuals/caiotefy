@@ -121,7 +121,7 @@ export default function Footer() {
             <div className="flex xl:hidden flex-row"></div>
             <div className="fixed w-full h-[72px] p-[8px] flex flex-row items-center justify-between gap-[8px] bg-[var(--background)] bottom-0">
                 <div className="w-[30%] flex flex-row items-center justify-start gap-[16px]">
-                    <div className="w-[56px] h-[56px] rounded-[8px] overflow-hidden">
+                    <div className="size-[56px] rounded-[8px] overflow-hidden">
                         <Image className="w-full h-full object-cover"
                             src="/images/album-cover.jpg"
                             alt="Album Cover"
@@ -130,11 +130,11 @@ export default function Footer() {
                             ></Image>
                     </div>
                     <div className="flex flex-col">
-                        <Link href="/track/1" className="hover:underline">
+                        <Link href="/track/1" className="hover:text-[var(--texthover)]">
                             <h1 className="text-[14px]">Track</h1>
                         </Link>
-                        <Link href="/artist/1" className="hover:underline">
-                            <h2 className="text-[12px]">Artist</h2>
+                        <Link href="/artist/1" className="hover:text-[var(--texthover)]">
+                            <h2 className="text-[12px] text-[var(--subtext)]">Artist</h2>
                         </Link>
                     </div>
                     <div className="flex items-center justify-center">
