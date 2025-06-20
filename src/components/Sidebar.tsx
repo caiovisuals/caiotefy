@@ -7,10 +7,21 @@ export default function Sidebar() {
     const pathname = usePathname()
 
     return (
-        <div className="fixed w-[72px] p-[8px] flex flex-col bg-[var(--background)] left-0 mt-[72px]">
-            <div className="flex flex-col"></div>
-            <div className="flex flex-col"></div>
-            <nav className="w-full flex flex-col">oi</nav>
+        <div className="hidden w-[80px] xl:flex flex-col items-center justify-start bg-[var(--middleground)] p-[8px] left-0 mx-[8px] rounded-[8px]">
+            <div className="flex flex-col">
+                <button><Link href="/" className="text-[var(--text)] text-[14px] font-semibold">Biblfdfdio</Link></button>
+            </div>
+            <div className="flex flex-col">
+                <button><Link href="/" className="text-[var(--text)] text-[14px] font-semibold">+</Link></button>
+            </div>
+            <nav className="w-full flex flex-col">
+                <div className="flex flex-col gap-[8px]">
+
+                </div>
+                <div className="flex flex-col gap-[8px]">
+                    
+                </div>
+            </nav>
         </div>
     )
 }

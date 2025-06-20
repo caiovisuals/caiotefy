@@ -12,8 +12,8 @@ html {
   --background: #050505;
   --middleground: #202020;
   --foreground: #333;
-  --action: #444;
-  --text: white ;
+  --action: #454545;
+  --text: white;
 }
 
 ::-webkit-scrollbar {
