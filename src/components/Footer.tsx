@@ -16,14 +16,34 @@ export default function Footer() {
 
     const handlePlayPause = async () => {
         if (isPlaying) {
-        await fetch("/api/player/pause", { method: "POST" })
+            await fetch("/api/player/pause", { method: "POST" })
         } else {
-        await fetch("/api/player", {
+            await fetch("/api/player/play", {
             method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
             body: JSON.stringify({ trackId: "track1" }),
-        })
+            })
         }
+
         setIsPlaying(!isPlaying)
+    }
+
+    const getPlayIcon = () => {
+        if (isPlaying) {
+            return (
+            <>
+                <path d="M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7z"/>
+            </>
+            )
+        } else {
+            return (
+            <>
+                <path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288z"></path>
+            </>
+            )
+        }
     }
 
     function formatTime(ms: number) {
@@ -184,7 +204,7 @@ export default function Footer() {
                         </div>
                         <button onClick={handlePlayPause} className="cursor-pointer bg-[var(--text)] size-[32px] rounded-full flex items-center justify-center">
                             <svg viewBox="0 0 16 16" fill="#" width={16} height={16}>
-                                <path d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288z"></path>
+                                {getPlayIcon()}
                             </svg>
                         </button>
                         <div className="flex flex-row items-center justify-start gap-[8px]">

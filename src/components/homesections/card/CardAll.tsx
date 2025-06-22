@@ -11,7 +11,7 @@ export default function CardAll() {
             <div className="w-full grid grid-cols-4 gap-[16px] mb-[8px]">
                 <div className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
                     <div className="flex flex-row items-center justify-start gap-[16px]">
-                        <div className="size-[80px] rounded-[8px] overflow-hidden">
+                        <div className="size-[72px] rounded-[8px] overflow-hidden">
                             <Image className="w-full h-full object-cover"
                                 src="/images/album-cover.jpg"
                                 alt="Album Cover"
@@ -30,7 +30,7 @@ export default function CardAll() {
                 </div>
                 <div className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
                     <div className="flex flex-row items-center justify-start gap-[16px]">
-                        <div className="size-[80px] rounded-[8px] overflow-hidden">
+                        <div className="size-[72px] rounded-[8px] overflow-hidden">
                             <Image className="w-full h-full object-cover"
                                 src="/images/album-cover.jpg"
                                 alt="Album Cover"
@@ -49,7 +49,7 @@ export default function CardAll() {
                 </div>
                 <div className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
                     <div className="flex flex-row items-center justify-start gap-[16px]">
-                        <div className="size-[80px] rounded-[8px] overflow-hidden">
+                        <div className="size-[72px] rounded-[8px] overflow-hidden">
                             <Image className="w-full h-full object-cover"
                                 src="/images/album-cover.jpg"
                                 alt="Album Cover"
@@ -68,7 +68,7 @@ export default function CardAll() {
                 </div>
                 <div className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
                     <div className="flex flex-row items-center justify-start gap-[16px]">
-                        <div className="size-[80px] rounded-[8px] overflow-hidden">
+                        <div className="size-[72px] rounded-[8px] overflow-hidden">
                             <Image className="w-full h-full object-cover"
                                 src="/images/album-cover.jpg"
                                 alt="Album Cover"
