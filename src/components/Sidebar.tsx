@@ -2,7 +2,6 @@
 
 import Link from "next/link"
 import Image from "next/image"
-import { usePathname } from "next/navigation"
 
 type SidebarProps = {
     isOpen: boolean
@@ -10,7 +9,6 @@ type SidebarProps = {
 }
 
 export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
-    const pathname = usePathname()
     const toggleDropdown = () => setIsOpen(prev => !prev)
 
     return (
@@ -36,26 +34,26 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                 <div className="w-full flex flex-col gap-[8px]">
                     <button className="w-full flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
                         <Image className="rounded-[4px] size-full aspect-square object-cover max-w-[52px]"
-                            src="/likedoptions/liked-songs.png" 
+                            src="/collections/liked-songs.png" 
                             alt="Musicas Curtidas"
                             width={160}
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Músicas Curtidas</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Músicas Curtidas</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="w-full flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
                         <Image className="rounded-[4px] size-full aspect-square object-cover max-w-[52px]"
-                            src="/likedoptions/saved-episodes.png" 
+                            src="/collections/saved-episodes.png" 
                             alt="Episódios Salvos"
                             width={160}
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Episódios Salvos</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Episódios Salvos</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                 </div>
@@ -68,8 +66,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
@@ -80,8 +78,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
@@ -92,8 +90,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
@@ -104,8 +102,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
@@ -116,8 +114,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
@@ -128,8 +126,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
@@ -140,8 +138,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
@@ -152,8 +150,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
@@ -164,8 +162,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                     <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
@@ -176,32 +174,8 @@ export default function Sidebar({ isOpen, setIsOpen }: SidebarProps) {
                             height={160}
                         ></Image>
                         <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
-                        </div>
-                    </button>
-                    <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
-                        <Image className="rounded-[4px] size-full aspect-square object-cover max-w-[52px]" 
-                            src="/images/album-cover.jpg" 
-                            alt=""
-                            width={160}
-                            height={160}
-                        ></Image>
-                        <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
-                        </div>
-                    </button>
-                    <button className="flex flex-row items-center justify-start p-[4px] gap-[16px] cursor-pointer">
-                        <Image className="rounded-[4px] size-full aspect-square object-cover max-w-[52px]" 
-                            src="/images/album-cover.jpg" 
-                            alt=""
-                            width={160}
-                            height={160}
-                        ></Image>
-                        <div className={`${isOpen ? 'flex' : 'hidden'} flex-col items-start justify-center`}>
-                            <span className="text-[var(--text)] text-[14px]">Album 1</span>
-                            <span className="text-[var(--subtext)] text-[12px]">Playlist</span>
+                            <span className="text-[var(--text)] text-[16px] whitespace-nowrap">Album 1</span>
+                            <span className="text-[var(--subtext)] text-[14px] whitespace-nowrap">Playlist</span>
                         </div>
                     </button>
                 </div>

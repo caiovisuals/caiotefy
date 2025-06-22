@@ -6,7 +6,7 @@ export async function GET() {
     return NextResponse.json({
         isPlaying: PLAYER_STATE.isPlaying,
         currentTime: PLAYER_STATE.currentTime,
-        duration: PLAYER_STATE.duration,
+        duration_ms: PLAYER_STATE.duration_ms,
         currentTrack: PLAYER_STATE.currentTrack,
         shuffle: PLAYER_STATE.shuffle,
         repeat: PLAYER_STATE.repeat,
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
         if (track) {
         updatePlayerState({
             currentTrack: track,
-            duration: track.duration_ms,
+            duration_ms: track.duration_ms,
             currentTime: 0,
             isPlaying: true
         })

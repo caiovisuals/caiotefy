@@ -3,7 +3,7 @@ import { Track } from "./track"
 export interface PlayerState {
     isPlaying: boolean;
     currentTime: number;
-    duration: number;
+    duration_ms: number;
     currentTrack: Track;
     shuffle: boolean;
     repeat: boolean;

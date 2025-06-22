@@ -4,7 +4,7 @@ import { mockTracks } from "@/mocks/tracks"
 export let PLAYER_STATE: PlayerState = {
     isPlaying: false,
     currentTime: 0,
-    duration: 200690, // duration of track1
+    duration_ms: mockTracks[0].duration_ms,
     currentTrack: mockTracks[0],
     shuffle: false,
     repeat: false,

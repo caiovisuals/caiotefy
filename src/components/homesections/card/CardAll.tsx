@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
+import PlayButton from "@/components/Ui/PlayButton"
 
 export default function CardAll() {
     return (
@@ -9,7 +10,7 @@ export default function CardAll() {
                 <button>Mostrar Tudo</button>
             </div>
             <div className="w-full grid grid-cols-4 gap-[16px] mb-[8px]">
-                <div className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
+                <Link href="/album" className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
                     <div className="flex flex-row items-center justify-start gap-[16px]">
                         <div className="size-[72px] rounded-[8px] overflow-hidden">
                             <Image className="w-full h-full object-cover"
@@ -24,11 +25,9 @@ export default function CardAll() {
                             <p className="text-[16px] text-[var(--subtext)]">Artista</p>
                         </div>
                     </div>
-                    <div>
-                        play
-                    </div>
-                </div>
-                <div className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
+                    <PlayButton/>
+                </Link>
+                <Link href="/album" className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
                     <div className="flex flex-row items-center justify-start gap-[16px]">
                         <div className="size-[72px] rounded-[8px] overflow-hidden">
                             <Image className="w-full h-full object-cover"
@@ -43,11 +42,9 @@ export default function CardAll() {
                             <p className="text-[16px] text-[var(--subtext)]">Artista</p>
                         </div>
                     </div>
-                    <div>
-                        play
-                    </div>
-                </div>
-                <div className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
+                    <PlayButton/>
+                </Link>
+                <Link href="/album" className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
                     <div className="flex flex-row items-center justify-start gap-[16px]">
                         <div className="size-[72px] rounded-[8px] overflow-hidden">
                             <Image className="w-full h-full object-cover"
@@ -62,11 +59,9 @@ export default function CardAll() {
                             <p className="text-[16px] text-[var(--subtext)]">Artista</p>
                         </div>
                     </div>
-                    <div>
-                        play
-                    </div>
-                </div>
-                <div className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
+                    <PlayButton/>
+                </Link>
+                <Link href="/album" className="group size-full aspect-3/4 bg-[var(--foreground)] rounded-[8px] flex flex-col items-start justify-between gap-[8%] p-[24px] cursor-pointer">
                     <div className="flex flex-row items-center justify-start gap-[16px]">
                         <div className="size-[72px] rounded-[8px] overflow-hidden">
                             <Image className="w-full h-full object-cover"
@@ -81,10 +76,8 @@ export default function CardAll() {
                             <p className="text-[16px] text-[var(--subtext)]">Artista</p>
                         </div>
                     </div>
-                    <div>
-                        play
-                    </div>
-                </div>
+                    <PlayButton/>
+                </Link>
             </div>
         </div>
 )}
