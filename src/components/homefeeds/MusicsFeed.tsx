@@ -1,5 +1,5 @@
 import Link from "next/link"
-import RecentTopMusic from "../homesections/RecentTopMusic"
+import RecentTopMusic from "../homesections/recenttop/RecentTopMusic"
 
 export default function MusicsFeed() {
     return (

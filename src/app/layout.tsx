@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import { Geologica } from "next/font/google"
 import Header from "@/components/Header"
-import Sidebar from "@/components/Sidebar"
 import Footer from "@/components/Footer"
 import "./globals.css"
 
@@ -21,7 +20,6 @@ export default function Layout({children,}: Readonly<{children: React.ReactNode}
             <body className={geologica.className="flex flex-col w-screen h-screen"}>
                 <Header/>
                 <div className="flex flex-row w-full h-full mt-[64px] mb-[72px] overflow-x-hidden">
-                    <Sidebar/>
                     {children}
                 </div>
                 <Footer/>

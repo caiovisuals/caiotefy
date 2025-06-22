@@ -1,5 +1,5 @@
 import Link from "next/link"
-import RecentTopPodcast from "../homesections/RecentTopPodcast"
+import RecentTopPodcast from "../homesections/recenttop/RecentTopPodcast"
 
 export default function PodcastsFeed() {
     return (

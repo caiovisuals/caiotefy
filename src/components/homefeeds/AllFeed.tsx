@@ -1,5 +1,6 @@
 import Link from "next/link"
-import RecentTopAll from "../homesections/RecentTopAll"
+import RecentTopAll from "../homesections/recenttop/RecentTopAll"
+import CardAll from "../homesections/card/CardAll"
 
 export default function AllFeed() {
     return (
@@ -59,6 +60,7 @@ export default function AllFeed() {
                         <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 10</div>
                     </div>
                 </div>
+                <CardAll/>
                 <footer className="flex flex-col gap-[32px] mt-[8px] mb-[52px]">
                     <div className="w-full h-[2px] bg-[var(--foreground)]"/>
                     <div className="flex flex-row items-center justify-between gap-[16px]">

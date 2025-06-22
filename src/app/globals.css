@@ -16,7 +16,7 @@ html {
   --action: #454545;
   --text: white;
   --subtext: #b3b3b3;
-  --texthover: #d8d8d8;
+  --texthover: #cacaca;
   --primary: #2078E5;
 }
 
@@ -34,6 +34,14 @@ html {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--action);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 body {
