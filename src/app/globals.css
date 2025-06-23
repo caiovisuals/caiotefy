@@ -15,8 +15,8 @@ html {
   --foreground: #333333;
   --action: #454545;
   --text: white;
-  --subtext: #b3b3b3;
-  --texthover: #cacaca;
+  --subtext: #B3B3B3;
+  --texthover: #AAAAAA;
   --primary: #2078E5;
 }
 
@@ -39,6 +39,7 @@ html {
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;

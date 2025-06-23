@@ -1,26 +1,28 @@
 import Link from "next/link"
-import RecentTopPodcast from "../homesections/recenttop/RecentTopPodcast"
+import CardPodcast from "../homesections/card/CardPodcast"
+import TileButton from "@/components/Ui/tiles/TileButton"
+import RecentTopMusic from "../homesections/recenttop/RecentTopMusic"
 
-export default function PodcastsFeed() {
+export default function PodcastFeed() {
     return (
             <div className="w-full h-full flex flex-col gap-[16px] px-[40px] overflow-y-auto overflow-x-hidden rounded-[8px]">
-                <RecentTopPodcast/>
+                <RecentTopMusic/>
                 <div className="flex flex-col gap-[16px]">
                     <div className="flex flex-row items-center justify-between">
                         <h1>Feito para user</h1>
                         <button>Mostrar Tudo</button>
                     </div>
                     <div className="flex flex-row items-center gap-[8px] pb-[8px] overflow-x-auto rounded-[8px]">
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 1</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 2</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 3</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 4</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 5</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 6</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 7</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 8</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 9</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 10</div>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
                     </div>
                 </div>
                 <div className="flex flex-col gap-[16px]">
@@ -29,16 +31,16 @@ export default function PodcastsFeed() {
                         <button>Mostrar Tudo</button>
                     </div>
                     <div className="flex flex-row items-center gap-[8px] pb-[8px] overflow-x-auto rounded-[8px]">
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 1</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 2</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 3</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 4</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 5</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 6</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 7</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 8</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 9</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 10</div>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
                     </div>
                 </div>
                 <div className="flex flex-col gap-[16px]">
@@ -47,18 +49,19 @@ export default function PodcastsFeed() {
                         <button>Mostrar Tudo</button>
                     </div>
                     <div className="flex flex-row items-center gap-[8px] pb-[8px] overflow-x-auto rounded-[8px]">
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 1</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 2</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 3</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 4</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 5</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 6</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 7</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 8</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 9</div>
-                        <div className="p-[8px] w-[200px] min-h-[150px] max-h-[300px] aspect-square bg-gray-300 rounded-[8px]">Card 10</div>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
+                        <TileButton/>
                     </div>
                 </div>
+                <CardPodcast/>
                 <footer className="flex flex-col gap-[32px] mt-[8px] mb-[52px]">
                     <div className="w-full h-[2px] bg-[var(--foreground)]"/>
                     <div className="flex flex-row items-center justify-between gap-[16px]">

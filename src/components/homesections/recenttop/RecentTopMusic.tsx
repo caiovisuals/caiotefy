@@ -16,7 +16,9 @@ export default function RecentTopMusic() {
                 <div className="w-full h-full flex items-center justify-start">
                     <h1 className="16px">Album</h1>
                 </div>
-                <PlayButton/>
+                <div className="flex items-center justify-center mr-[6%]">
+                    <PlayButton/>
+                </div>
             </div>
             <div className="group w-full max-h-full-[160px] aspect-5/1 bg-[var(--foreground)] rounded-[8px] flex flex-row items-center justify-between gap-[8%] cursor-pointer">
                 <div className="h-full aspect-square rounded-l-[8px]">
@@ -30,7 +32,9 @@ export default function RecentTopMusic() {
                 <div className="w-full h-full flex items-center justify-start">
                     <h1 className="16px">Album</h1>
                 </div>
-                <PlayButton/>
+                <div className="flex items-center justify-center mr-[6%]">
+                    <PlayButton/>
+                </div>
             </div>
             <div className="group w-full max-h-full-[160px] aspect-5/1 bg-[var(--foreground)] rounded-[8px] flex flex-row items-center justify-between gap-[8%] cursor-pointer">
                 <div className="h-full aspect-square rounded-l-[8px]">
@@ -44,7 +48,9 @@ export default function RecentTopMusic() {
                 <div className="w-full h-full flex items-center justify-start">
                     <h1 className="16px">Album</h1>
                 </div>
-                <PlayButton/>
+                <div className="flex items-center justify-center mr-[6%]">
+                    <PlayButton/>
+                </div>
             </div>
             <div className="group w-full max-h-full-[160px] aspect-5/1 bg-[var(--foreground)] rounded-[8px] flex flex-row items-center justify-between gap-[8%] cursor-pointer">
                 <div className="h-full aspect-square rounded-l-[8px]">
@@ -58,7 +64,9 @@ export default function RecentTopMusic() {
                 <div className="w-full h-full flex items-center justify-start">
                     <h1 className="16px">Album</h1>
                 </div>
-                <PlayButton/>
+                <div className="flex items-center justify-center mr-[6%]">
+                    <PlayButton/>
+                </div>
             </div>
             <div className="group w-full max-h-full-[160px] aspect-5/1 bg-[var(--foreground)] rounded-[8px] flex flex-row items-center justify-between gap-[8%] cursor-pointer">
                 <div className="h-full aspect-square rounded-l-[8px]">
@@ -72,7 +80,9 @@ export default function RecentTopMusic() {
                 <div className="w-full h-full flex items-center justify-start">
                     <h1 className="16px">Album</h1>
                 </div>
-                <PlayButton/>
+                <div className="flex items-center justify-center mr-[6%]">
+                    <PlayButton/>
+                </div>
             </div>
             <div className="group w-full max-h-full-[160px] aspect-5/1 bg-[var(--foreground)] rounded-[8px] flex flex-row items-center justify-between gap-[8%] cursor-pointer">
                 <div className="h-full aspect-square rounded-l-[8px]">
@@ -86,7 +96,9 @@ export default function RecentTopMusic() {
                 <div className="w-full h-full flex items-center justify-start">
                     <h1 className="16px">Album</h1>
                 </div>
-                <PlayButton/>
+                <div className="flex items-center justify-center mr-[6%]">
+                    <PlayButton/>
+                </div>
             </div>
             <div className="group w-full max-h-full-[160px] aspect-5/1 bg-[var(--foreground)] rounded-[8px] flex flex-row items-center justify-between gap-[8%] cursor-pointer">
                 <div className="h-full aspect-square rounded-l-[8px]">
@@ -100,7 +112,9 @@ export default function RecentTopMusic() {
                 <div className="w-full h-full flex items-center justify-start">
                     <h1 className="16px">Album</h1>
                 </div>
-                <PlayButton/>
+                <div className="flex items-center justify-center mr-[6%]">
+                    <PlayButton/>
+                </div>
             </div>
             <div className="group w-full max-h-full-[160px] aspect-5/1 bg-[var(--foreground)] rounded-[8px] flex flex-row items-center justify-between gap-[8%] cursor-pointer">
                 <div className="h-full aspect-square rounded-l-[8px]">
@@ -114,7 +128,9 @@ export default function RecentTopMusic() {
                 <div className="w-full h-full flex items-center justify-start">
                     <h1 className="16px">Album</h1>
                 </div>
-                <PlayButton/>
+                <div className="flex items-center justify-center mr-[6%]">
+                    <PlayButton/>
+                </div>
             </div>
         </div>
 )}

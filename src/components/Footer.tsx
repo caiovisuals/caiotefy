@@ -1,18 +1,21 @@
 "use client"
 
-import { useState, useEffect  } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
-export default function Footer() {
+type FooterProps = {
+    isSidePlayerOpen: boolean
+    setIsSidePlayerOpen: React.Dispatch<React.SetStateAction<boolean>>
+}
+
+export default function Footer({ isSidePlayerOpen, setIsSidePlayerOpen }: FooterProps) {
     const [isPlaying, setIsPlaying] = useState(false)
     const [isShuffling, setIsShuffling] = useState(false)
     const [isRepeating, setIsRepeating] = useState(false)
-
     const [isLiked, setIsLiked] = useState(false)
-
     const [currentTime, setCurrentTime] = useState(0)
-    const [duration, setDuration] = useState(0)
+    const [duration_ms, setDurationMs] = useState(0)
 
     const handlePlayPause = async () => {
         if (isPlaying) {
@@ -59,9 +62,9 @@ export default function Footer() {
         if (isPlaying) {
             interval = setInterval(() => {
             setCurrentTime(prev => {
-                if (prev + 1000 >= duration) {
+                if (prev + 1000 >= duration_ms) {
                 clearInterval(interval!)
-                return duration
+                return duration_ms
                 }
                 return prev + 1000
             })
@@ -71,7 +74,7 @@ export default function Footer() {
         return () => {
             if (interval) clearInterval(interval)
         }
-    }, [isPlaying, duration])
+    }, [isPlaying, duration_ms])
 
     useEffect(() => {
         const fetchTrack = async () => {
@@ -79,7 +82,7 @@ export default function Footer() {
             const data = await res.json()
             setIsPlaying(data.isPlaying)
             setCurrentTime(data.currentTime)
-            setDuration(data.duration)
+            setDurationMs(data.duration_ms)
         }
 
         fetchTrack()
@@ -171,9 +174,9 @@ export default function Footer() {
                             height={160}
                         ></Image>
                     </div>
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-start justify-center">
                         <Link href="/track/1" className="hover:text-[var(--texthover)]">
-                            <h1 className="text-[14px]">Track</h1>
+                            <h1 className="text-[14px] leading-[14px]">Track</h1>
                         </Link>
                         <Link href="/artist/1" className="hover:text-[var(--texthover)]">
                             <h2 className="text-[12px] text-[var(--subtext)]">Artist</h2>
@@ -223,24 +226,24 @@ export default function Footer() {
                     <div className="w-full flex flex-row items-center justify-center gap-[8px] px-[18px]">
                         <div className="text-[12px] flex items-center">{formatTime(currentTime)}</div>
                         <div className="relative w-full group">
-                            <input type="range" min="0" max={duration} step="5000" aria-valuetext={`${formatTime(currentTime)} / ${formatTime(duration)}`} value={currentTime} className="absolute top-0 left-0 w-full h-full opacity-0 z-50 cursor-pointer" onChange={(e) => setCurrentTime(Number(e.target.value))}></input>
+                            <input type="range" min="0" max={duration_ms} step="5000" aria-valuetext={`${formatTime(currentTime)} / ${formatTime(duration_ms)}`} value={currentTime} className="absolute top-0 left-0 w-full h-full opacity-0 z-50 cursor-pointer" onChange={(e) => setCurrentTime(Number(e.target.value))}></input>
                             <div className="absolute top-1/2 left-0 w-full h-[4px] bg-[var(--middleground)] rounded-full -translate-y-1/2 z-10 overflow-hidden">
                                 <div
                                     className="h-full bg-[var(--text)] group-hover:bg-[var(--primary)] transition-colors duration-300 ease-in-out rounded-full"
-                                    style={{ width: `${(currentTime / duration) * 100}%` }}
+                                    style={{ width: `${(currentTime / duration_ms) * 100}%` }}
                                 />
                             </div>
                             <div
                                 className="hidden absolute size-[12px] group-hover:flex rounded-full bg-[var(--text)] shadow-md top-1/2 -translate-y-1/2 -translate-x-1/2 pointer-events-none z-10"
-                                style={{ left: `${(currentTime / duration) * 100}%` }}
+                                style={{ left: `${(currentTime / duration_ms) * 100}%` }}
                             />
                         </div>
-                        <div className="text-[12px] flex items-center">{formatTime(duration)}</div>
+                        <div className="text-[12px] flex items-center">{formatTime(duration_ms)}</div>
                     </div>
                 </div>
                 <div className="w-[30%] flex flex-row items-center justify-end gap-[16px]">
-                    <button className="flex items-center justify-center cursor-pointer">
-                        <svg viewBox="0 0 16 16" fill="var(--subtext)" width={16} height={16}>
+                    <button onClick={() => setIsSidePlayerOpen(prev => !prev)} className="flex items-center justify-center cursor-pointer">
+                        <svg viewBox="0 0 16 16" fill={isSidePlayerOpen ? "var(--primary)" : "var(--subtext)"} width={16} height={16}>
                             <path d="M15.002 1.75A1.75 1.75 0 0 0 13.252 0h-10.5a1.75 1.75 0 0 0-1.75 1.75v12.5c0 .966.783 1.75 1.75 1.75h10.5a1.75 1.75 0 0 0 1.75-1.75zm-1.75-.25a.25.25 0 0 1 .25.25v12.5a.25.25 0 0 1-.25.25h-10.5a.25.25 0 0 1-.25-.25V1.75a.25.25 0 0 1 .25-.25z"></path>
                             <path d="M11.196 8 6 5v6z"></path>
                         </svg>
