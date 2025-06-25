@@ -21,11 +21,11 @@ export default function SidePlayer({ isSidePlayerOpen, setIsSidePlayerOpen }: Si
 
     return (
         <aside className={`${isSidePlayerOpen ? 'flex' : 'hidden'} w-[416px] flex-col gap-[8px] h-full py-[8px] px-[16px] isolate rounded-[8px] bg-[var(--middleground)]`}>
-            <header className="w-full py-[8px]">
+            <header className="w-full flex flex-row items-center justify-between py-[8px]">
                 <Link href="/track">
                     <span className="font-semibold">trackname</span>
                 </Link>
-                <button onClick={() => setIsSidePlayerOpen?.(false)}>X</button>
+                <button className="p-[4px] cursor-pointer rounded-full" onClick={() => setIsSidePlayerOpen?.(false)}>X</button>
             </header>
             <div className="flex flex-col">
                 <div className="aspect-square rounded-[8px] overflow-hidden">
@@ -33,7 +33,7 @@ export default function SidePlayer({ isSidePlayerOpen, setIsSidePlayerOpen }: Si
                 </div>
                 <div className="flex flex-row py-[16px] gap-[8px] items-center justify-between">
                     <div className="flex flex-col">
-                        <Link href="" className="hover:text-[var(--texthover)]">
+                        <Link href="" className="hover:text-[v ar(--texthover)]">
                             <h1 className="text-[24px] leading-[24px] font-semibold">Track</h1>
                         </Link>
                         <Link href="" className="hover:text-[var(--texthover)]">

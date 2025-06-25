@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 
-export default function PlayButton(){
+export default function PlayButtonPlaylist(){
     const [isPlaying ] = useState(false)
     const getPlayIcon = () => {
         if (isPlaying) {
@@ -21,9 +21,9 @@ export default function PlayButton(){
     }
 
     return (
-            <div className="flex items-center justify-center cursor-pointer opacity-0 group-hover:opacity-100 transition-opacity duration-150 z-50">
-                <button aria-label="Play" className="w-[48px] h-[48px] rounded-full bg-[var(--primary)] flex items-center justify-center cursor-pointer">
-                    <svg viewBox="0 0 16 16" fill="#" height={22} width={22}>
+            <div className="flex items-center justify-center cursor-pointer">
+                <button aria-label="Play" className="w-[56px] h-[56px] rounded-full bg-[var(--primary)] flex items-center justify-center cursor-pointer">
+                    <svg viewBox="0 0 16 16" fill="#" height={28} width={28}>
                         {getPlayIcon()}
                     </svg>
                 </button>

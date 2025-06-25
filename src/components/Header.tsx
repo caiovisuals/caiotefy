@@ -25,12 +25,12 @@ export default function Header() {
 
     return (
         <div className="fixed h-[64px] px-[16px] py-[8px] w-full flex flex-row items-center justify-between bg-[var(--background)] top-0">
-            <div className="w-[32%] flex flex-row items-center justify-start">
+            <div className="w-[22%] xl:w-[32%] flex flex-row items-center justify-start">
                 <Link href="/">
                     CAIOTEFY
                 </Link>
             </div>
-            <div className="w-[36%] flex flex-row gap-[8px] items-center justify-center">
+            <div className="w-[56%] xl:w-[36%] flex flex-row gap-[8px] items-center justify-center">
                 <Link href="/">
                     <button className="flex items-center justify-center bg-[var(--middleground)] hover:bg-[var(--middlehover)] transition-all duration-300 ease-in-out size-[48px] aspect-square rounded-full cursor-pointer">
                         <svg viewBox="0 0 24 24" className="size-[28px]" fill="var(--subtext)">
@@ -54,7 +54,7 @@ export default function Header() {
                     </Link>
                 </form>
             </div>
-            <div className="w-[32%] flex flex-row items-center justify-end gap-[16px]">
+            <div className="w-[22%] xl:w-[32%] flex flex-row items-center justify-end gap-[16px]">
                 <Link href="/news">
                     <button className="flex items-center justify-center p-[4px] cursor-pointer">
                         <svg viewBox="0 0 16 16" fill="var(--subtext)" width={18} height={18}>

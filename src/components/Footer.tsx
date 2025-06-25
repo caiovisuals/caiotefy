@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -16,6 +16,7 @@ export default function Footer({ isSidePlayerOpen, setIsSidePlayerOpen }: Footer
     const [isLiked, setIsLiked] = useState(false)
     const [currentTime, setCurrentTime] = useState(0)
     const [duration_ms, setDurationMs] = useState(0)
+    const [isFullscreen, setIsFullscreen] = useState(false)
 
     const handlePlayPause = async () => {
         if (isPlaying) {
@@ -161,6 +162,30 @@ export default function Footer({ isSidePlayerOpen, setIsSidePlayerOpen }: Footer
         setIsMuted(!isMuted)
     }
 
+    const handleFullscreen = useCallback(() => {
+        const element = document.documentElement
+
+        if (!document.fullscreenElement) {
+        element.requestFullscreen().catch(err => {
+            console.error(`Erro ao tentar ativar o modo tela cheia: ${err.message}`)
+        })
+        } else {
+        document.exitFullscreen()
+        }
+    }, [])
+
+    useEffect(() => {
+        const handleChange = () => {
+        setIsFullscreen(!!document.fullscreenElement)
+        }
+
+        document.addEventListener("fullscreenchange", handleChange)
+
+        return () => {
+        document.removeEventListener("fullscreenchange", handleChange)
+        }
+    }, [])
+
     return (
         <div className="flex flex-col">
             <div className="flex xl:hidden flex-row"></div>
@@ -194,30 +219,30 @@ export default function Footer({ isSidePlayerOpen, setIsSidePlayerOpen }: Footer
                     <div className="flex flex-row items-center justify-center gap-[16px]">
                         <div className="flex flex-row items-center justify-end gap-[8px]">
                             <button onClick={handleShuffle} className="p-[8px] cursor-pointer"> 
-                                <svg viewBox="0 0 16 16" fill={isShuffling ? "var(--primary)" : "var(--subtext)"} width={16} height={16}>
+                                <svg viewBox="0 0 16 16" fill={isShuffling ? "var(--primary)" : "var(--subtext)"} width={16} height={16} className="transition-all duration-300 ease-in-out">
                                     <path d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"></path>
                                     <path d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"></path>
                                 </svg>
                             </button>
                             <button onClick={handlePrevious} className="p-[8px] cursor-pointer">
-                                <svg viewBox="0 0 16 16" fill="var(--subtext)" width={16} height={16} className="hover:fill-[var(--text)]">
+                                <svg viewBox="0 0 16 16" fill="var(--subtext)" width={16} height={16} className="hover:fill-[var(--text)] transition-all duration-300 ease-in-out">
                                     <path d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7z"></path>
                                 </svg>
                             </button>
                         </div>
-                        <button onClick={handlePlayPause} className="cursor-pointer bg-[var(--text)] size-[32px] rounded-full flex items-center justify-center">
+                        <button onClick={handlePlayPause} className="cursor-pointer bg-[var(--text)] size-[32px] rounded-full flex items-center justify-center hover:brightness-75 transition-all duration-300 ease-in-out">
                             <svg viewBox="0 0 16 16" fill="#" width={16} height={16}>
                                 {getPlayIcon()}
                             </svg>
                         </button>
                         <div className="flex flex-row items-center justify-start gap-[8px]">
                             <button onClick={handleNext} className="p-[8px] cursor-pointer">
-                                <svg viewBox="0 0 16 16" fill="var(--subtext)" width={16} height={16} className="hover:fill-[var(--text)]">
+                                <svg viewBox="0 0 16 16" fill="var(--subtext)" width={16} height={16} className="hover:fill-[var(--text)] transition-all duration-300 ease-in-out">
                                     <path d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7z"></path>
                                 </svg>
                             </button>
                             <button onClick={handleRepeat} className="p-[8px] cursor-pointer"> 
-                                <svg viewBox="0 0 16 16" fill={isRepeating ? "var(--primary)" : "var(--subtext)"} width={16} height={16}>
+                                <svg viewBox="0 0 16 16" fill={isRepeating ? "var(--primary)" : "var(--subtext)"} width={16} height={16} className="transition-all duration-300 ease-in-out">
                                     <path d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75z"></path>
                                 </svg>
                             </button>
@@ -264,7 +289,7 @@ export default function Footer({ isSidePlayerOpen, setIsSidePlayerOpen }: Footer
                             <path d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0m-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"></path>
                         </svg>
                     </button>
-                    <div className="flex flex-row items-center justify-center gap-[16px]">
+                    <div className="hidden md:flex flex-row items-center justify-center gap-[16px]">
                         <button onClick={toggleMute} className="flex items-center justify-center cursor-pointer" aria-label={isMuted ? "Unmute" : "Mute"}>
                             <svg viewBox="0 0 16 16" fill="var(--subtext)" width={16} height={16}>
                                 {getVolumeIcon()}
@@ -299,8 +324,8 @@ export default function Footer({ isSidePlayerOpen, setIsSidePlayerOpen }: Footer
                             <path d="M15.25 9.007a.75.75 0 0 1 .75.75v4.493a.75.75 0 0 1-.75.75H9.325a.75.75 0 0 1-.75-.75V9.757a.75.75 0 0 1 .75-.75z"></path>
                         </svg>
                     </button>
-                    <button className="flex items-center justify-center cursor-pointer">
-                        <svg viewBox="0 0 16 16" fill="var(--subtext)" width={16} height={16}>
+                    <button onClick={handleFullscreen} aria-label="Alternar tela cheia" className="flex items-center justify-center cursor-pointer">
+                        <svg viewBox="0 0 16 16" fill={isFullscreen ? "var(--primary)" : "var(--subtext)"} width={16} height={16}>
                             <path d="M0.25 3C0.25 2.0335 1.0335 1.25 2 1.25H5.375V2.75H2C1.86193 2.75 1.75 2.86193 1.75 3V5.42857H0.25V3ZM14 2.75H10.625V1.25H14C14.9665 1.25 15.75 2.0335 15.75 3V5.42857H14.25V3C14.25 2.86193 14.1381 2.75 14 2.75ZM1.75 10.5714V13C1.75 13.1381 1.86193 13.25 2 13.25H5.375V14.75H2C1.0335 14.75 0.25 13.9665 0.25 13V10.5714H1.75ZM14.25 13V10.5714H15.75V13C15.75 13.9665 14.9665 14.75 14 14.75H10.625V13.25H14C14.1381 13.25 14.25 13.1381 14.25 13Z"></path>
                         </svg>
                     </button>

@@ -1,4 +1,4 @@
-import ExploreTiles from "@/components/Ui/tiles/ExploreTiles"
+import ExploreGender from "@/components/Ui/tiles/ExploreGender"
 
 export default function Explore() {
     return (
@@ -8,22 +8,22 @@ export default function Explore() {
                 <button></button>
             </div>
             <div role="list" className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 2xl:grid-cols-6 gap-[8px]">
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
-                <ExploreTiles/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
+                <ExploreGender/>
             </div>
         </div>
     )
