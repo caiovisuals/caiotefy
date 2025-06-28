@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react"
+import Link from "next/link"
 import Card from "@/components/Ui/tiles/Card"
 
 export default function CardAll() {
@@ -31,8 +32,10 @@ export default function CardAll() {
     return (
         <div className="flex flex-col gap-[16px]">
             <div className="flex flex-row items-center justify-between">
-                <h1>Novidades</h1>
-                <button>Mostrar Tudo</button>
+                <h1 className="text-[22px] font-semibold">Novidades</h1>
+                <Link href="/">
+                    <button className="cursor-pointer">Mostrar Tudo</button>
+                </Link>
             </div>
             <div ref={containerRef} className={`w-full gap-[16px] grid ${cols}`}>
                 <Card type="music"/>

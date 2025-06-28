@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import PlayButtonPlaylist from "@/components/Ui/PlayButtonPlaylist"
+import MainFooter from "@/components/MainFooter"
 
 export default function Playlist() {
     return (
@@ -33,6 +34,9 @@ export default function Playlist() {
                                 <path d="M4.5 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m15 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3m-7.5 0a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
                             </svg>
                         </button>
+                        <div className="absolute z-9999">
+
+                        </div>
                     </div>
                     <div className="flex flex-row items-center justify-end">
                         <button className="group flex flex-row gap-[8px] items-center cursor-pointer">
@@ -44,7 +48,7 @@ export default function Playlist() {
                     </div>
                 </div>
                 <div className="flex flex-col py-[16px] mt-[16px]">
-                    <div className="grid items-center text-[var(--subtext)] pb-[6px] border-b-[1px] border-solid border-[var(--action)]" style={{gridTemplateColumns: `[index] var(--tracklist-index-column-width, 48px) [first] minmax(120px, var(--col1, 6fr)) [var1] minmax(120px, var(--col2, 4fr)) [var2] minmax(120px, var(--col3, 3fr)) [last] minmax(120px, var(--col4, 1fr))`}}>
+                    <div className="grid items-center text-[var(--subtext)] pb-[6px] border-b-[2px] border-solid border-[var(--foreground)]" style={{gridTemplateColumns: `[index] var(--tracklist-index-column-width, 48px) [first] minmax(120px, var(--col1, 6fr)) [var1] minmax(120px, var(--col2, 4fr)) [var2] minmax(120px, var(--col3, 3fr)) [last] minmax(120px, var(--col4, 1fr))`}}>
                         <div className="ml-[16px]">#</div>
                         <div>Título</div>
                         <div>Álbum</div>
@@ -61,6 +65,7 @@ export default function Playlist() {
                     </div>
                 </div>
             </div>
+            <MainFooter/>
         </div>
     )
 }
